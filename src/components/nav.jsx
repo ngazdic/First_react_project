@@ -3,7 +3,7 @@ import Logo from '../assets/react.svg'; // Correct path
 
 function Navigation() {
 	return (
-		<nav className='navbar container bg-secondary '>
+		<nav className='navbar container'>
 			<div className='container'>
 				<div className='d-flex'>
 					<img src={Logo} alt='React Logo' className='navbar-brand' />
