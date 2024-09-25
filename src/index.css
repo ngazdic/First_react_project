@@ -1,0 +1,59 @@
+.p-navbar {
+	letter-spacing: 0.1rem;
+}
+
+li::marker {
+	color: rgb(62, 193, 297);
+	font-size: 1.5rem;
+}
+
+nav div p {
+	font-size: 1rem;
+	padding-top: 10px;
+}
+
+#main-div {
+	position: relative;
+	width: 100%;
+	height: 80vh;
+	background-image: url('./assets/react.svg');
+	background-size: 400px;
+	background-repeat: no-repeat;
+	background-position: right -50px top 50px;
+
+	z-index: 2;
+}
+
+#main-div h1,
+#main-div li {
+	position: relative; /* Ensure text is above the overlay */
+	z-index: 10;
+	color: white; /* Or another color to contrast with the overlay */
+}
+
+#main-div::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(128, 128, 128, 0.9);
+	z-index: 1;
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 768px) {
+	#main-div {
+		height: 50vh; /* Adjust height for larger screens */
+		background-position: right -50px top 50px;
+	}
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
