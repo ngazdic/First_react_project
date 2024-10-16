@@ -1,18 +1,19 @@
 import React from 'react';
-import './App.css';
-import Main from './components/main-page.jsx'; // Importing Main component
-import Navigation from './components/nav.jsx'; // Importing Navigation component
+import Navigation from './components/Navbar';
+import Main from './components/Main';
+import './style.css';
 
-function App() {
+export default function App() {
+	const [darkMode, setDarkMode] = React.useState(true);
+
+	function toggleDarkMode() {
+		setDarkMode((prevMode) => !prevMode);
+	}
+
 	return (
-		<div>
-			<Navigation />
-
-			<div id='main-div' className='container bg-dark text-start pb-5 '>
-				<Main />
-			</div>
+		<div className='container'>
+			<Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+			<Main darkMode={darkMode} />
 		</div>
 	);
 }
-
-export default App;
